@@ -1,0 +1,21 @@
+== Seed: pending task ==
+team=demo id=fix-login status=pending version=1
+
+== Worker A: ClaimTask ==
+worker=worker-A token_len=32
+
+== Worker B: ClaimTask (must fail) ==
+worker=worker-B err=ErrLeaseStillValid (expected)
+
+== Worker A: TransitionTask in_progress -> done ==
+transition=ok
+
+== Final task on disk ==
+{
+  "id": "fix-login",
+  "status": "done",
+  "version": 3,
+  "description": "Fix the broken login flow in src/auth/login.go",
+  "created_at": "0001-01-01T00:00:00Z",
+  "updated_at": "0001-01-01T00:00:00Z"
+}

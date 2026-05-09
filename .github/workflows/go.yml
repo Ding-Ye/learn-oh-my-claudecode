@@ -28,6 +28,7 @@ jobs:
           - s06-mcp-tool-server
           - s07-continuation
           - s08-background-tasks
+          - s09-task-state-machine
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-go@v5

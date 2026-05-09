@@ -92,7 +92,7 @@ export const CURRICULUM: ChapterMeta[] = [
       zh: "文件态任务状态机（CAS+租约）",
       en: "File-backed Task State Machine",
     },
-    available: false,
+    available: true,
   },
   {
     slug: "s10-team-watchdog",

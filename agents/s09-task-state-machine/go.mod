@@ -1,0 +1,7 @@
+module github.com/Ding-Ye/learn-oh-my-claudecode/agents/s09-task-state-machine
+
+go 1.21.0
+
+require github.com/gofrs/flock v0.12.1
+
+require golang.org/x/sys v0.22.0 // indirect
