@@ -25,6 +25,7 @@ jobs:
           - s03-magic-keywords
           - s04-config-loader
           - s05-hooks-pipeline
+          - s06-mcp-tool-server
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-go@v5

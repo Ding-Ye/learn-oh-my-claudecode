@@ -65,7 +65,7 @@ export const CURRICULUM: ChapterMeta[] = [
       zh: "MCP 工具注册表与分类禁用",
       en: "MCP Tool Registry with Categories",
     },
-    available: false,
+    available: true,
   },
   {
     slug: "s07-continuation",

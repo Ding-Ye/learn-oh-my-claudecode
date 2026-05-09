@@ -27,7 +27,7 @@ Each chapter adds one mechanism — agent registry, prompt loader, magic keyword
 | s03 | [Magic Keywords (Prompt Middleware)](docs/en/s03-magic-keywords.md) | ✅ |
 | s04 | [Layered Config & deepMerge](docs/en/s04-config-loader.md) | ✅ |
 | s05 | [Hooks Pipeline via os/exec](docs/en/s05-hooks-pipeline.md) | ✅ |
-| s06 | MCP Tool Registry with Categories | ⏳ |
+| s06 | [MCP Tool Registry with Categories](docs/en/s06-mcp-tool-server.md) | ✅ |
 | s07 | Continuation Enforcement (Sisyphus) | ⏳ |
 | s08 | Background Task Heuristics | ⏳ |
 | s09 | File-backed Task State Machine | ⏳ |

@@ -27,7 +27,7 @@
 | s03 | [魔法关键词（提示词中间件）](docs/zh/s03-magic-keywords.md) | ✅ |
 | s04 | [分层配置与深合并](docs/zh/s04-config-loader.md) | ✅ |
 | s05 | [钩子流水线（os/exec）](docs/zh/s05-hooks-pipeline.md) | ✅ |
-| s06 | MCP 工具注册表与分类禁用 | ⏳ |
+| s06 | [MCP 工具注册表与分类禁用](docs/zh/s06-mcp-tool-server.md) | ✅ |
 | s07 | 推石上山（继续执行强制） | ⏳ |
 | s08 | 后台任务启发式调度 | ⏳ |
 | s09 | 文件态任务状态机（CAS+租约） | ⏳ |

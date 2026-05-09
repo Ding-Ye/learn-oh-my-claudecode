@@ -1,0 +1,9 @@
+== invoke python.repl (enabled) ==
+out="python.repl evaluated args={\"code\":\"print(1+1)\"}" err=<nil>
+
+== invoke lsp.find_definition (disabled via OMC_DISABLE_TOOLS=lsp) ==
+out="" err=category-disabled
+
+== Names() (disabled tools annotated) ==
+- lsp.find_definition (category=lsp) [disabled]
+- python.repl (category=python)
