@@ -15,6 +15,7 @@ web/.next/
 web/out/
 web/.turbo/
 web/next-env.d.ts
+web/tsconfig.tsbuildinfo
 
 # OS
 .DS_Store
