@@ -1,0 +1,12 @@
+{
+  "agents": {
+    "executor": { "model": "project-pinned-executor" },
+    "planner":  { "model": "project-pinned-planner" }
+  },
+  "features": {
+    "parallelExecution": false
+  },
+  "mcpServers": {
+    "context7": { "enabled": false }
+  }
+}

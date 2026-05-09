@@ -47,7 +47,7 @@ export const CURRICULUM: ChapterMeta[] = [
       zh: "分层配置与深合并",
       en: "Layered Config & deepMerge",
     },
-    available: false,
+    available: true,
   },
   {
     slug: "s05-hooks-pipeline",

@@ -4,4 +4,5 @@ use (
 	./agents/s01-agent-registry
 	./agents/s02-prompt-loader
 	./agents/s03-magic-keywords
+	./agents/s04-config-loader
 )

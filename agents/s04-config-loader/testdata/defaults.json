@@ -1,0 +1,15 @@
+{
+  "agents": {
+    "omc": { "model": "claude-opus-4-7" },
+    "explore": { "model": "claude-haiku-4-7" },
+    "executor": { "model": "claude-sonnet-4-7" }
+  },
+  "features": {
+    "parallelExecution": true,
+    "lspTools": true
+  },
+  "mcpServers": {
+    "exa": { "enabled": true },
+    "context7": { "enabled": true }
+  }
+}

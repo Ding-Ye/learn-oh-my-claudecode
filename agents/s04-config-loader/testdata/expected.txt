@@ -1,0 +1,24 @@
+== defaults ==
+  agents.executor.model    = claude-sonnet-4-7
+  agents.architect.model   = claude-opus-4-7
+  features.parallelExec    = true
+  mcpServers.exa.enabled   = true
+
+== defaults + user ==
+  agents.executor.model    = claude-sonnet-4-5
+  agents.architect.model   = claude-opus-4-7
+  features.parallelExec    = true
+  mcpServers.exa.enabled   = false
+
+== defaults + user + project ==
+  agents.executor.model    = project-pinned-executor
+  agents.architect.model   = claude-opus-4-7
+  features.parallelExec    = false
+  mcpServers.exa.enabled   = false
+
+== defaults + user + project + env(OMC_MODEL_HIGH=opus-test) ==
+  agents.executor.model    = project-pinned-executor
+  agents.architect.model   = opus-test
+  features.parallelExec    = false
+  mcpServers.exa.enabled   = false
+
