@@ -31,7 +31,7 @@ Each chapter adds one mechanism — agent registry, prompt loader, magic keyword
 | s07 | [Continuation Enforcement (Sisyphus)](docs/en/s07-continuation.md) | ✅ |
 | s08 | [Background Task Heuristics](docs/en/s08-background-tasks.md) | ✅ |
 | s09 | [File-backed Task State Machine](docs/en/s09-task-state-machine.md) | ✅ |
-| s10 | Team Runtime & Watchdog (Goroutine Pool) | ⏳ |
+| s10 | [Team Runtime & Watchdog (Goroutine Pool)](docs/en/s10-team-watchdog.md) | ✅ |
 | s_full | End-to-end Integration | ⏳ |
 | A | Appendix A · Mental Models | ⏳ |
 | B | Appendix B · Upstream Source Map | ⏳ |

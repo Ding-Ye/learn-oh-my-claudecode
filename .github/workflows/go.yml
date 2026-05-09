@@ -29,6 +29,7 @@ jobs:
           - s07-continuation
           - s08-background-tasks
           - s09-task-state-machine
+          - s10-team-watchdog
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-go@v5

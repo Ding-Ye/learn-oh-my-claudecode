@@ -1,0 +1,23 @@
+== Setup ==
+workers=3 tasks=7 store=<tmpdir>
+
+== Submitting 7 tasks ==
+submitted id=task-0 work=0.10s
+submitted id=task-1 work=0.20s
+submitted id=task-2 work=0.15s
+submitted id=task-3 work=0.30s
+submitted id=task-4 work=0.20s
+submitted id=task-5 work=0.25s
+submitted id=task-6 work=0.15s
+
+== Completions ==
+id=task-0 status=done
+id=task-1 status=done
+id=task-2 status=done
+id=task-3 status=done
+id=task-4 status=done
+id=task-5 status=done
+id=task-6 status=done
+
+== Final tallies ==
+done=7 failed=0 total=7

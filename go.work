@@ -10,4 +10,5 @@ use (
 	./agents/s07-continuation
 	./agents/s08-background-tasks
 	./agents/s09-task-state-machine
+	./agents/s10-team-watchdog
 )

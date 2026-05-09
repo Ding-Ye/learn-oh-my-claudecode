@@ -101,7 +101,7 @@ export const CURRICULUM: ChapterMeta[] = [
       zh: "团队 Runtime 与 Watchdog（goroutine 池）",
       en: "Team Runtime & Watchdog (Goroutine Pool)",
     },
-    available: false,
+    available: true,
   },
   {
     slug: "s_full-integration",
