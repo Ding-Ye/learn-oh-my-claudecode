@@ -1,0 +1,33 @@
+# Go build artifacts
+*.exe
+*.test
+*.out
+bin/
+vendor/
+
+# Per-session compiled binaries (we don't commit these)
+agents/*/main
+agents/*/s*-*
+
+# Node / Next.js (web/)
+node_modules/
+web/.next/
+web/out/
+web/.turbo/
+web/next-env.d.ts
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*~
+
+# Skill state (curriculum decisions kept private to local workdir)
+.learn/
+
+# Logs
+*.log

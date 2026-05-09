@@ -1,0 +1,4 @@
+architect found=true model=claude-opus-4-7
+with override: claude-haiku-4-5
+without override: claude-opus-4-7
+registered: [architect executor]
