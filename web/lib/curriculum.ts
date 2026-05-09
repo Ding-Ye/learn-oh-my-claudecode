@@ -56,7 +56,7 @@ export const CURRICULUM: ChapterMeta[] = [
       zh: "钩子流水线（os/exec）",
       en: "Hooks Pipeline via os/exec",
     },
-    available: false,
+    available: true,
   },
   {
     slug: "s06-mcp-tool-server",

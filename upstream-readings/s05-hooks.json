@@ -1,0 +1,112 @@
+// Source: hooks/hooks.json (Yeachan-Heo/oh-my-claudecode, MIT)
+// License: MIT, Copyright (c) 2025 Yeachan Heo
+//
+// Annotated excerpt for s05. The upstream file is plain JSON (212 lines,
+// 10 lifecycle events). This teaching copy is JSONC — "//"-prefixed
+// commentary added BY THIS PROJECT for pedagogy. The upstream file does
+// NOT contain comments; do not paste this back as-is.
+//
+// Lines below mirror upstream L1–L62 (the UserPromptSubmit and
+// SessionStart blocks). They are the two shapes we parse in hook.go:
+//   - one matcher per entry, "*" wildcards (UserPromptSubmit L4–L19);
+//   - multiple matchers per event, each with its own timeout
+//     (SessionStart L21–L62 — *, init, maintenance).
+{
+  // L1–L3 — top-level envelope. The dispatcher ignores "description".
+  "description": "OMC orchestration hooks with async capabilities",
+  "hooks": {
+    // ───────────────────────────────────────────────────────────────────
+    // L4–L19 — UserPromptSubmit. Single "*" matcher. Two hooks fire
+    // concurrently in upstream (Promise.allSettled); the Go port walks
+    // them serially in declaration order but isolates failures.
+    "UserPromptSubmit": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"$CLAUDE_PLUGIN_ROOT\"/scripts/run.cjs \"$CLAUDE_PLUGIN_ROOT\"/scripts/keyword-detector.mjs",
+            "timeout": 5
+          },
+          {
+            "type": "command",
+            "command": "node \"$CLAUDE_PLUGIN_ROOT\"/scripts/run.cjs \"$CLAUDE_PLUGIN_ROOT\"/scripts/skill-injector.mjs",
+            "timeout": 3
+          }
+        ]
+      }
+    ],
+    // ───────────────────────────────────────────────────────────────────
+    // L21–L62 — SessionStart. Three entries, three matchers. The "init"
+    // and "maintenance" matchers fire ONLY when the runtime payload's
+    // matcher field equals that string (upstream uses an exact match;
+    // the Go port uses substring against the raw payload bytes — close
+    // enough for teaching, see dispatcher.go::matches commentary).
+    "SessionStart": [
+      {
+        "matcher": "*",                      // always fires
+        "hooks": [
+          { "type": "command",
+            "command": "node \"$CLAUDE_PLUGIN_ROOT\"/scripts/run.cjs \"$CLAUDE_PLUGIN_ROOT\"/scripts/session-start.mjs",
+            "timeout": 5 },
+          { "type": "command",
+            "command": "node \"$CLAUDE_PLUGIN_ROOT\"/scripts/run.cjs \"$CLAUDE_PLUGIN_ROOT\"/scripts/project-memory-session.mjs",
+            "timeout": 5 },
+          { "type": "command",
+            "command": "node \"$CLAUDE_PLUGIN_ROOT\"/scripts/run.cjs \"$CLAUDE_PLUGIN_ROOT\"/scripts/wiki-session-start.mjs",
+            "timeout": 5 }
+        ]
+      },
+      {
+        "matcher": "init",                   // first run only
+        "hooks": [
+          { "type": "command",
+            "command": "node \"$CLAUDE_PLUGIN_ROOT\"/scripts/run.cjs \"$CLAUDE_PLUGIN_ROOT\"/scripts/setup-init.mjs",
+            "timeout": 30 }
+        ]
+      },
+      {
+        "matcher": "maintenance",            // weekly upkeep
+        "hooks": [
+          { "type": "command",
+            "command": "node \"$CLAUDE_PLUGIN_ROOT\"/scripts/run.cjs \"$CLAUDE_PLUGIN_ROOT\"/scripts/setup-maintenance.mjs",
+            "timeout": 60 }
+        ]
+      }
+    ]
+  }
+}
+
+// Reading notes (Go-port comparisons):
+//
+// 1. **L4–L19 (UserPromptSubmit) → testdata/hooks.json + Dispatcher.**
+//    The shape is "event: [{matcher, hooks: [...]}, ...]" — exactly what
+//    type Manifest map[string][]Entry encodes. The two-hook concurrent
+//    fire becomes a serial in-order walk in Go; we lose the latency win
+//    but keep the deterministic ordering tests need.
+// 2. **Timeouts are in seconds, on disk.** Upstream relies on the JS
+//    runtime's number-to-ms convention; the Go port has no such
+//    convention, so hook.go::UnmarshalJSON multiplies by time.Second
+//    explicitly. Drop that helper and the field becomes 5 nanoseconds.
+// 3. **"matcher": "*" vs. named.** Upstream uses a tiny regex/string
+//    matcher inside a wrapper. We lift it to substring-against-payload
+//    so a payload of {"reason":"init"} fires the SessionStart/init
+//    entry without parsing the JSON twice. This is faithful enough for
+//    teaching; production would parse the payload and extract the
+//    matcher field properly.
+// 4. **timeout: 1 → 60 range.** Upstream timeouts cluster in 3–60s.
+//    Short hooks (keyword-detector) run in 5s; setup-init gets 30; the
+//    weekly maintenance script gets 60. The teaching manifest uses 1s
+//    for the boulder/sleep_too_long case so the timeout test runs in
+//    one second instead of waiting on real upstream defaults.
+// 5. **Why we copy this file even though it's already JSON.** Plan
+//    §"Required reading" calls for an annotated excerpt. JSON has no
+//    standard comment syntax; we use JSONC purely as the annotation
+//    medium. The teaching repo's actual on-disk fixture
+//    (testdata/hooks.json) is plain JSON so encoding/json parses it
+//    without a JSONC dependency.
+// 6. **What we leave out.** PreToolUse, PermissionRequest, PostToolUse,
+//    PostToolUseFailure, SubagentStart/Stop, PreCompact, Stop,
+//    SessionEnd — eight more event types, all the same shape. The
+//    Manifest map is permissive: any new event name "just works"
+//    without touching the dispatcher.

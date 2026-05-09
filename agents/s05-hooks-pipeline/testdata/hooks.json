@@ -1,0 +1,59 @@
+{
+  "description": "s05 demo manifest — three matchers, mixed timeouts, faithful to upstream hooks/hooks.json shape.",
+  "hooks": {
+    "UserPromptSubmit": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "sh testdata/scripts/echo.sh",
+            "timeout": 5
+          }
+        ]
+      },
+      {
+        "matcher": "ultrawork",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "sh testdata/scripts/echo.sh",
+            "timeout": 3
+          }
+        ]
+      },
+      {
+        "matcher": "boulder",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "sh testdata/scripts/sleep_too_long.sh",
+            "timeout": 1
+          }
+        ]
+      }
+    ],
+    "SessionStart": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "sh testdata/scripts/echo.sh",
+            "timeout": 5
+          }
+        ]
+      },
+      {
+        "matcher": "init",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "sh testdata/scripts/echo.sh",
+            "timeout": 30
+          }
+        ]
+      }
+    ]
+  }
+}

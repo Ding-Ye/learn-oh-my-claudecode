@@ -26,7 +26,7 @@
 | s02 | [提示词加载器（embed.FS）](docs/zh/s02-prompt-loader.md) | ✅ |
 | s03 | [魔法关键词（提示词中间件）](docs/zh/s03-magic-keywords.md) | ✅ |
 | s04 | [分层配置与深合并](docs/zh/s04-config-loader.md) | ✅ |
-| s05 | 钩子流水线（os/exec） | ⏳ |
+| s05 | [钩子流水线（os/exec）](docs/zh/s05-hooks-pipeline.md) | ✅ |
 | s06 | MCP 工具注册表与分类禁用 | ⏳ |
 | s07 | 推石上山（继续执行强制） | ⏳ |
 | s08 | 后台任务启发式调度 | ⏳ |

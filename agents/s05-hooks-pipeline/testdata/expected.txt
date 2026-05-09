@@ -1,0 +1,7 @@
+== UserPromptSubmit (payload={"prompt":"hello"}) ==
+[UserPromptSubmit/*] sh testdata/scripts/echo.sh -> exit=0 stdout="{\"prompt\":\"hello\"}" err=<nil>
+
+== UserPromptSubmit (payload={"prompt":"push the boulder"}) ==
+[UserPromptSubmit/*] sh testdata/scripts/echo.sh -> exit=0 stdout="{\"prompt\":\"push the boulder\"}" err=<nil>
+[UserPromptSubmit/boulder] sh testdata/scripts/sleep_too_long.sh -> exit=-1 stdout="" err=deadline-exceeded
+

@@ -24,6 +24,7 @@ jobs:
           - s02-prompt-loader
           - s03-magic-keywords
           - s04-config-loader
+          - s05-hooks-pipeline
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-go@v5

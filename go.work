@@ -5,4 +5,5 @@ use (
 	./agents/s02-prompt-loader
 	./agents/s03-magic-keywords
 	./agents/s04-config-loader
+	./agents/s05-hooks-pipeline
 )
