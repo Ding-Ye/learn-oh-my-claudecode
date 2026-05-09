@@ -74,7 +74,7 @@ export const CURRICULUM: ChapterMeta[] = [
       zh: "推石上山（继续执行强制）",
       en: "Continuation Enforcement (Sisyphus)",
     },
-    available: false,
+    available: true,
   },
   {
     slug: "s08-background-tasks",

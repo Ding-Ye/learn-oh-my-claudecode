@@ -1,0 +1,17 @@
+== prompt addendum (first 5 lines, embedded via //go:embed) ==
+## CONTINUATION ENFORCEMENT — THE BOULDER NEVER STOPS
+
+### You are bound to your todo list
+
+Like Sisyphus condemned to roll his boulder eternally, you are bound to
+
+== DetectCompletion: three sample responses ==
+[high confidence] response="I have completed all tasks."
+  -> claimed=true confidence="high" reason="Clear completion claim detected"
+[low confidence] response="I think this should be working now."
+  -> claimed=true confidence="low" reason="Completion claimed with uncertainty language"
+[no claim] response="Still investigating the bug."
+  -> claimed=false confidence="" reason="No completion claim detected"
+
+== one reminder (seeded for fixture stability) ==
+[VERIFICATION GATE] Before claiming completion, run the tests and re-read the todo list. If anything is pending, continue.

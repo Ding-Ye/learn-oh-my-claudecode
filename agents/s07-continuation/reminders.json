@@ -1,0 +1,9 @@
+[
+  "[SYSTEM REMINDER — TODO CONTINUATION] Incomplete tasks remain in your todo list. Continue working on the next pending task. Mark each task complete when finished. Do not stop until all tasks are done.",
+  "[TODO CONTINUATION ENFORCED] Your todo list has incomplete items. The boulder does not stop. Continue working on pending tasks immediately.",
+  "[OMC REMINDER] You attempted to stop with incomplete work. This is not permitted. Check your todo list and continue working on the next pending task.",
+  "[CONTINUATION REQUIRED] Incomplete tasks detected. You are bound to your todo list. Continue executing until every task shows the completed status.",
+  "[THE BOULDER NEVER STOPS] Your work is not done. Resume working on incomplete tasks immediately. Verify completion before any further stop attempts.",
+  "[VERIFICATION GATE] Before claiming completion, run the tests and re-read the todo list. If anything is pending, continue.",
+  "[SISYPHEAN OATH] The summit, or nothing. Continue."
+]

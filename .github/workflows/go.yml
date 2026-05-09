@@ -26,6 +26,7 @@ jobs:
           - s04-config-loader
           - s05-hooks-pipeline
           - s06-mcp-tool-server
+          - s07-continuation
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-go@v5
