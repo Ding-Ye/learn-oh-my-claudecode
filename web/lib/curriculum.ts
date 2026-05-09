@@ -83,7 +83,7 @@ export const CURRICULUM: ChapterMeta[] = [
       zh: "后台任务启发式调度",
       en: "Background Task Heuristics",
     },
-    available: false,
+    available: true,
   },
   {
     slug: "s09-task-state-machine",

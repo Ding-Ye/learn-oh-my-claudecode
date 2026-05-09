@@ -1,0 +1,19 @@
+== Decide: seven sample commands ==
+[long-running] cmd="npm install" running=0 max=5
+  -> background=true confidence="high" reason="matches long-running pattern"
+[long-running] cmd="cargo build --release" running=0 max=5
+  -> background=true confidence="high" reason="matches long-running pattern"
+[long-running] cmd="docker pull alpine" running=0 max=5
+  -> background=true confidence="high" reason="matches long-running pattern"
+[blocking] cmd="git status" running=0 max=5
+  -> background=false confidence="high" reason="matches blocking pattern"
+[blocking] cmd="ls -la" running=0 max=5
+  -> background=false confidence="high" reason="matches blocking pattern"
+[default] cmd="hello-world" running=0 max=5
+  -> background=false confidence="low" reason="no pattern matched; defaulting to foreground"
+[cap-reached] cmd="npm install" running=5 max=5
+  -> background=false confidence="high" reason="concurrency cap reached"
+
+== Executor: spawn `sleep 0.3` and Wait ==
+started: pid>0=true
+exited: code=0

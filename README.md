@@ -29,7 +29,7 @@
 | s05 | [钩子流水线（os/exec）](docs/zh/s05-hooks-pipeline.md) | ✅ |
 | s06 | [MCP 工具注册表与分类禁用](docs/zh/s06-mcp-tool-server.md) | ✅ |
 | s07 | [推石上山（继续执行强制）](docs/zh/s07-continuation.md) | ✅ |
-| s08 | 后台任务启发式调度 | ⏳ |
+| s08 | [后台任务启发式调度](docs/zh/s08-background-tasks.md) | ✅ |
 | s09 | 文件态任务状态机（CAS+租约） | ⏳ |
 | s10 | 团队 Runtime 与 Watchdog（goroutine 池） | ⏳ |
 | s_full | 端到端集成 | ⏳ |

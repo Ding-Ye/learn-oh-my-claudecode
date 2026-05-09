@@ -8,4 +8,5 @@ use (
 	./agents/s05-hooks-pipeline
 	./agents/s06-mcp-tool-server
 	./agents/s07-continuation
+	./agents/s08-background-tasks
 )

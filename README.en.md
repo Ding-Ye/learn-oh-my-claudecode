@@ -29,7 +29,7 @@ Each chapter adds one mechanism — agent registry, prompt loader, magic keyword
 | s05 | [Hooks Pipeline via os/exec](docs/en/s05-hooks-pipeline.md) | ✅ |
 | s06 | [MCP Tool Registry with Categories](docs/en/s06-mcp-tool-server.md) | ✅ |
 | s07 | [Continuation Enforcement (Sisyphus)](docs/en/s07-continuation.md) | ✅ |
-| s08 | Background Task Heuristics | ⏳ |
+| s08 | [Background Task Heuristics](docs/en/s08-background-tasks.md) | ✅ |
 | s09 | File-backed Task State Machine | ⏳ |
 | s10 | Team Runtime & Watchdog (Goroutine Pool) | ⏳ |
 | s_full | End-to-end Integration | ⏳ |
