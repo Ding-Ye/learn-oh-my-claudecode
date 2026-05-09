@@ -1,0 +1,12 @@
+[imperative ultrawork]
+  in : "ultrawork build a server"
+  out: "[ULTRAWORK MODE — PARALLEL AGENT ORCHESTRATION]\nbuild a server"
+[informational en  ]
+  in : "what is ultrawork?"
+  out: "what is ultrawork?"
+[inside code block ]
+  in : "```ultrawork``` is a keyword"
+  out: "```ultrawork``` is a keyword"
+[imperative search ]
+  in : "search OAuth flow then refactor"
+  out: "[SEARCH MODE — EXHAUSTIVE LOOKUP]\nsearch OAuth flow then refactor"

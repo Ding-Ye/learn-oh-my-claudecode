@@ -38,7 +38,7 @@ export const CURRICULUM: ChapterMeta[] = [
       zh: "魔法关键词（提示词中间件）",
       en: "Magic Keywords (Prompt Middleware)",
     },
-    available: false,
+    available: true,
   },
   {
     slug: "s04-config-loader",

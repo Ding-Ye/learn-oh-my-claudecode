@@ -22,6 +22,7 @@ jobs:
         session:
           - s01-agent-registry
           - s02-prompt-loader
+          - s03-magic-keywords
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-go@v5

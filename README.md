@@ -24,7 +24,7 @@
 |---|---|---|
 | s01 | [智能体注册表与模型分层](docs/zh/s01-agent-registry.md) | ✅ |
 | s02 | [提示词加载器（embed.FS）](docs/zh/s02-prompt-loader.md) | ✅ |
-| s03 | 魔法关键词（提示词中间件） | ⏳ |
+| s03 | [魔法关键词（提示词中间件）](docs/zh/s03-magic-keywords.md) | ✅ |
 | s04 | 分层配置与深合并 | ⏳ |
 | s05 | 钩子流水线（os/exec） | ⏳ |
 | s06 | MCP 工具注册表与分类禁用 | ⏳ |
