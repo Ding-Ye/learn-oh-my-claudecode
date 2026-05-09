@@ -1,0 +1,4 @@
+architect prompt (759 bytes), first line: "# Architect"
+path traversal rejected: true
+unknown agent surfaced as: true
+embedded agents: [architect executor explore]

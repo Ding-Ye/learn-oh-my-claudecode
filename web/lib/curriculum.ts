@@ -29,7 +29,7 @@ export const CURRICULUM: ChapterMeta[] = [
       zh: "提示词加载器（embed.FS）",
       en: "Prompt Loader with embed.FS",
     },
-    available: false,
+    available: true,
   },
   {
     slug: "s03-magic-keywords",

@@ -23,7 +23,7 @@ Each chapter adds one mechanism — agent registry, prompt loader, magic keyword
 | # | Chapter | Status |
 |---|---|---|
 | s01 | [Agent Registry & Model Tiers](docs/en/s01-agent-registry.md) | ✅ |
-| s02 | Prompt Loader with embed.FS | ⏳ |
+| s02 | [Prompt Loader with embed.FS](docs/en/s02-prompt-loader.md) | ✅ |
 | s03 | Magic Keywords (Prompt Middleware) | ⏳ |
 | s04 | Layered Config & deepMerge | ⏳ |
 | s05 | Hooks Pipeline via os/exec | ⏳ |

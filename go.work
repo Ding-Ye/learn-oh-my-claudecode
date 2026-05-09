@@ -1,3 +1,6 @@
 go 1.23
 
-use ./agents/s01-agent-registry
+use (
+	./agents/s01-agent-registry
+	./agents/s02-prompt-loader
+)
