@@ -32,9 +32,9 @@
 | s08 | [后台任务启发式调度](docs/zh/s08-background-tasks.md) | ✅ |
 | s09 | [文件态任务状态机（CAS+租约）](docs/zh/s09-task-state-machine.md) | ✅ |
 | s10 | [团队 Runtime 与 Watchdog（goroutine 池）](docs/zh/s10-team-watchdog.md) | ✅ |
-| s_full | 端到端集成 | ⏳ |
-| A | 附录 A · 心智模型 | ⏳ |
-| B | 附录 B · 上游源码导读地图 | ⏳ |
+| s_full | [端到端集成](docs/zh/s_full-integration.md) | ✅ |
+| A | [附录 A · 心智模型](docs/zh/appendix-a-mental-models.md) | ✅ |
+| B | [附录 B · 上游源码导读地图](docs/zh/appendix-b-upstream-map.md) | ✅ |
 
 ## 快速开始
 
